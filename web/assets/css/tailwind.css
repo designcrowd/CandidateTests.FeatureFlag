@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-feature-settings: 'ss01', 'ss02', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-bg text-text font-sans;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Custom scrollbar — quietly distinctive */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #26262e;
+    border-radius: 999px;
+    border: 2px solid #0a0a0c;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3a44;
+  }
+
+  /* Range slider — themed */
+  input[type='range'] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    height: 20px;
+  }
+  input[type='range']::-webkit-slider-runnable-track {
+    background: #26262e;
+    height: 4px;
+    border-radius: 999px;
+  }
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 999px;
+    background: #3f59f6;
+    margin-top: -5px;
+    box-shadow: 0 0 0 4px rgba(63, 89, 246, 0.2);
+    transition: box-shadow 150ms ease;
+  }
+  input[type='range']:hover::-webkit-slider-thumb {
+    box-shadow: 0 0 0 6px rgba(63, 89, 246, 0.3);
+  }
+  input[type='range']::-moz-range-track {
+    background: #26262e;
+    height: 4px;
+    border-radius: 999px;
+  }
+  input[type='range']::-moz-range-thumb {
+    height: 14px;
+    width: 14px;
+    border: 0;
+    border-radius: 999px;
+    background: #3f59f6;
+    box-shadow: 0 0 0 4px rgba(63, 89, 246, 0.2);
+  }
+}
+
+@layer utilities {
+  /* Diagonal-stripe pattern for the disabled rollout track */
+  .pattern-stripes {
+    background-image: repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 4px,
+      rgba(113, 113, 122, 0.25) 4px,
+      rgba(113, 113, 122, 0.25) 5px
+    );
+  }
+}

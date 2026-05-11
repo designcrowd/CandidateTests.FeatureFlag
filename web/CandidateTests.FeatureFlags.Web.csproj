@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.Build.NoTargets/3.7.0">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <VueFiles Include="app.vue" />
+        <VueFiles Include="pages/**/*.vue" />
+        <VueFiles Include="components/**/*.vue" />
+        <TSFiles Include="composables/**/*.ts" />
+        <TSFiles Include="types/**/*.ts" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="package.json" />
+        <Content Include="package-lock.json" />
+        <Content Include="tsconfig.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <TypeScriptCompile Include="nuxt.config.ts" />
+    </ItemGroup>
+
+    <Target Name="Build" />
+
+    <Target Name="VSTest" />
+</Project>

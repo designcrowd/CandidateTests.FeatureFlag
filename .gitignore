@@ -1,0 +1,33 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# Node / Nuxt
+node_modules/
+.nuxt/
+.output/
+.cache/
+dist/
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Interviewer-only notes
+INTERVIEWER.html
